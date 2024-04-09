@@ -8,7 +8,7 @@
     "start": "npm run server",
     "server": "cd server && node server.js",
     "client": "cd client && npm run start",
-    "postinstall": "npm run build",
+    "postinstall": "cd server && npm install && cd ../client && npm install",
     "build": "cd client && npm install && npm run build"
   },
   "devDependencies": {
