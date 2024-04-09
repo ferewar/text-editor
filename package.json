@@ -6,10 +6,10 @@
   "scripts": {
     "start:dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "npm run server",
-    "server": "cd server && nodemon server.js --ignore client",
+    "server": "cd server && node server.js",
     "client": "cd client && npm run start",
     "postinstall": "npm run build",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm install && npm run build"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
